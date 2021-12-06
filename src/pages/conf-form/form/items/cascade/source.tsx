@@ -10,7 +10,7 @@ const Source: React.FC = () => {
       options={['a', 'b']}
       fieldProps={{
         onChange(val) {
-          emitter.emit('form/cascade/source-change', val);
+          emitter.emit('cascade/source-change', val);
         },
       }}
     />

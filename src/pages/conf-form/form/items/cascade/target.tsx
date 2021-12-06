@@ -17,9 +17,9 @@ const Target: React.FC = () => {
       formRef?.current?.setFieldsValue({ [name]: '' });
       setOptions(optionsMap[val] ?? []);
     };
-    emitter.on('form/cascade/source-change', handleCascade);
+    emitter.on('cascade/source-change', handleCascade);
     return () => {
-      emitter.off('form/cascade/source-change', handleCascade);
+      emitter.off('cascade/source-change', handleCascade);
     };
   }, [formRef]);
   return <ProFormSelect label="级联目标" name={name} options={options} />;
